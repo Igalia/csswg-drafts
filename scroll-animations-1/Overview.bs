@@ -249,7 +249,7 @@ spec: cssom-view-1; type: dfn;
 					:   Otherwise,
 					::  The {{Document/scrollingElement}}
 						of the {{Document}} <a lt="document	associated with a window">associated</a>
-						with the {{Window}} that is the <a>current global object</a>.
+						with the {{Window}} that is the <a>current principal global object</a>.
 				</dl>
 
 			1.  Set the {{ScrollTimeline/axis}} property of |timeline|
