@@ -210,7 +210,7 @@ Registering Custom Highlights</h3>
 	[=registered=] into the [=highlight registry=].
 
 	The <dfn>highlight registry</dfn> is accessed via the {{CSS/highlights}} attribute of the {{CSS}} namespace,
-	and represents all the [=custom highlights=] [=registered=] for the [=current global object=]’s [=associated Document=].
+	and represents all the [=custom highlights=] [=registered=] for the [=current principal global object=]’s [=associated Document=].
 	It is a [=maplike=], and can be updated using the usual methods.
 	It's [=map entries=] is initially empty.
 
