@@ -158,7 +158,7 @@ urlPrefix: https://html.spec.whatwg.org/multipage/browsers.html; type: dfn; spec
     text: an entry with persisted user state
     text: session history entry
 urlPrefix: https://html.spec.whatwg.org/multipage/webappapis.html; type: dfn; spec: html
-    text: current global object
+    text: current principal global object
     text: document.open(); url: dom-document-open
     text: DOM manipulation task source
     text: event loop processing model
@@ -2689,7 +2689,7 @@ Note: While the time spaces themselves are not bounded, Web
 In addition to these time spaces we can also refer to the
 <em>document time space</em> which is time space of the <a>time
 values</a> of the <a>default document timeline</a> of the
-{{Document}} of the <a>current global object</a>.
+{{Document}} of the <a>current principal global object</a>.
 
 </div>
 
@@ -3240,7 +3240,7 @@ is defined in [[#animation-types]].
 ### Custom Properties ### {#custom-properties}
 
 For <a>custom properties</a> registered
-using the {{CSS/registerProperty()}} method for the <a>current global object</a>,
+using the {{CSS/registerProperty()}} method for the <a>current principal global object</a>,
 the <a>animation type</a> is <a>by computed value</a>,
 derived from the type used in the property's <a>syntax definition</a>.
 Where there is no <a>computed value</a> type that corresponds
@@ -4082,7 +4082,7 @@ interface DocumentTimeline : AnimationTimeline {
 ::  Creates a new {{DocumentTimeline}}.
     The {{Document}} with which the timeline is associated is the
     {{Document}} <a lt="document associated with a window">associated</a>
-    with the {{Window}} that is the <a>current global object</a>.
+    with the {{Window}} that is the <a>current principal global object</a>.
 
     <div class='parameters'>
 
@@ -4147,7 +4147,7 @@ interface Animation : EventTarget {
         timeline</var> or, if a <var>timeline</var> argument is missing,
         passing the <a>default document timeline</a> of the {{Document}}
         <a lt="document associated with a window">associated</a> with the
-        {{Window}} that is the <a>current global object</a>.
+        {{Window}} that is the <a>current principal global object</a>.
     3.  Run the procedure to <a>set the associated effect of an animation</a> on
         <var>animation</var> passing <var>source</var> as the <var>new
         effect</var>.
@@ -4166,7 +4166,7 @@ interface Animation : EventTarget {
         with which to associate the newly-created <a>animation</a>.
         If missing, the <a>default document timeline</a> of the
         {{Document}} <a lt="document associated with a window">associated</a>
-        with the {{Window}} that is the <a>current global object</a> is used.
+        with the {{Window}} that is the <a>current principal global object</a> is used.
 
     </div>
 
