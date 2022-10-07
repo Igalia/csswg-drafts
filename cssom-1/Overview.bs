@@ -792,7 +792,7 @@ represents a style sheet as defined by the CSS specification. In the CSSOM a
   <dd>
     <ol>
       <li>Construct a new {{/CSSStyleSheet}} object <var>sheet</var>.</li>
-      <li>Set <var>sheet</var>'s <a spec=cssom>location</a> to the <a spec=html>base URL</a> of the <a>associated Document</a> for the <a>current global object</a>.
+      <li>Set <var>sheet</var>'s <a spec=cssom>location</a> to the <a spec=html>base URL</a> of the <a>associated Document</a> for the <a>current principal global object</a>.
       <li>Set <var>sheet</var>'s <a>stylesheet base URL</a> to the {{CSSStyleSheetInit/baseURL}} attribute value from <var>options</var>.
       <li>Set <var>sheet</var>'s <a spec=cssom>parent CSS style sheet</a> to null.
       <li>Set <var>sheet</var>'s <a spec=cssom>owner node</a> to null.
@@ -801,7 +801,7 @@ represents a style sheet as defined by the CSS specification. In the CSSOM a
       <li>Unset <var>sheet</var>'s <a spec=cssom>alternate flag</a>.
       <li>Set <var>sheet</var>'s <a spec=cssom>origin-clean flag</a>.
       <li>Set <var>sheet</var>'s <a>constructed flag</a>.
-      <li>Set <var>sheet</var>'s <a>Constructor document</a> to the <a>associated Document</a> for the <a>current global object</a>.
+      <li>Set <var>sheet</var>'s <a>Constructor document</a> to the <a>associated Document</a> for the <a>current principal global object</a>.
       <li>If the {{CSSStyleSheetInit/media}} attribute of <var>options</var> is a string,
         <a>create a MediaList object</a> from the string
         and assign it as <var>sheet</var>'s <a spec=cssom>media</a>.
@@ -3110,7 +3110,7 @@ The <dfn method for=CSS>escape(<var>ident</var>)</dfn> operation must return the
 </div>
 
 Specifications that define operations on the {{CSS}} namespace and want to
-store some state should store the state on the <a spec=html>current global
+store some state should store the state on the <a spec=html>current principal global
 object</a>'s <a spec=html>associated <code>Document</code></a>.
 <!-- https://github.com/w3c/csswg-drafts/issues/180 -->
 
